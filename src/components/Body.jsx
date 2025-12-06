@@ -23,8 +23,8 @@ const Body = () => {
   }
 
   useEffect(()=>{
-    fetchUser;
-  })
+    fetchUser();
+  }, [])
   return (
     <>
     <NavBar/>
