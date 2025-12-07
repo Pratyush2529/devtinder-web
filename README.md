@@ -27,6 +27,8 @@
 - Profile Edit
 - New page to see all my connections
 - New page to see all my connection requests
+- Feature-> Accept/Reject Connection Request
+
 
 
 
