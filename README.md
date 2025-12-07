@@ -25,6 +25,11 @@
 - Logout
 - Feed
 - Profile Edit
+- See all my connections
+
+
+
+
 
  Body
     NavBar

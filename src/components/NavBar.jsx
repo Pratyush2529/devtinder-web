@@ -6,6 +6,8 @@ import { BASE_URL } from '../utils/constants';
 import { removeUser } from '../utils/userSlice';
 import { removeFeed } from '../utils/feedSlice';
 
+
+
 const NavBar = () => {
   const dispatch=useDispatch();
   const navigate=useNavigate();
@@ -44,7 +46,7 @@ const NavBar = () => {
         <span className="badge">New</span>
       </Link>
     </li>
-    <li><a>Settings</a></li>
+    <li><Link to="/connections">Connections</Link></li>
     <li><a onClick={handleLogout}>Logout</a></li>
   </ul>
 </div>
