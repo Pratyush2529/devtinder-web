@@ -13,5 +13,5 @@ const connectionSlice=createSlice({
     }
 });
 
-export const {addConnections, remomveConnections}=connectionSlice.actions;
+export const {addConnections, removeConnections}=connectionSlice.actions;
 export default connectionSlice.reducer

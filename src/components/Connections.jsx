@@ -28,9 +28,9 @@ if(connections.length===0) return <h1 className='text-bold text-2xl'>No connecti
     <div className='text-center my-10'>
         <h1 className='text-bold text-3xl text-white'>Connections</h1>
         {connections.map((connection)=>{
-            const {firstName, lastName, photoUrl, age, gender, about}=connection;
+            const {_id, firstName, lastName, photoUrl, age, gender, about}=connection;
             return(
-                <div className='flex m-4 p-4 items-center rounded-lg bg-base-300 w-1/2 mx-auto'>
+                <div key={_id} className='flex m-4 p-4 items-center rounded-lg bg-base-300 w-1/2 mx-auto'>
                     <div><img src={photoUrl} alt="photo" className='w-20 h-20 rounded-full' /></div>
                     <div className='text-left m-4'>
                         <h2 className='font-bold text-xl'>
