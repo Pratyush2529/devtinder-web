@@ -4,22 +4,23 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../utils/constants';
 import { removeUser } from '../utils/userSlice';
-import { removeFeed } from '../utils/feedSlice';
+import { clearFeed } from '../utils/feedSlice';
 import { removeConnections } from '../utils/connectionSlice';
-import { removeRequest } from '../utils/requestSlice';
+import { clearRequest } from '../utils/requestSlice';
 
 
 
 const NavBar = () => {
   const dispatch=useDispatch();
   const navigate=useNavigate();
+
   const handleLogout=async()=>{
     try{
       await axios.post(BASE_URL+"/logout", {}, {withCredentials:true});
       dispatch(removeUser());
-      dispatch(removeFeed());
+      dispatch(clearFeed());
       dispatch(removeConnections());
-      dispatch(removeRequest());
+      dispatch(clearRequest());
       navigate("/login");
     }catch(err){
       console.log(err);
