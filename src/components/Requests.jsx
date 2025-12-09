@@ -33,7 +33,7 @@ const Requests = () => {
 
   return (
     <div className='text-center my-10'>
-        <h1 className='text-bold text-3xl text-white'>Connections</h1>
+        <h1 className='text-bold text-3xl text-white'>Connection Requests</h1>
         {requests.map((request)=>{
             const {_id, firstName, lastName, photoUrl, age, gender, about}=request.senderId;
             return(
