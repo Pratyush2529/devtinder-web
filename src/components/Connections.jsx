@@ -3,7 +3,7 @@ import axios from 'axios';
 import { BASE_URL } from '../utils/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { addConnections } from '../utils/connectionSlice';
-import UserCard from './userCard';
+import UserCard from './UserCard';
 
 const Connections = () => {
     const dispatch=useDispatch();
