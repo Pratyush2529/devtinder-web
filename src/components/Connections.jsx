@@ -4,6 +4,7 @@ import { BASE_URL } from '../utils/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { addConnections } from '../utils/connectionSlice';
 import UserCard from './UserCard';
+import { Link } from 'react-router-dom';
 
 const Connections = () => {
     const dispatch=useDispatch();
@@ -30,7 +31,7 @@ if(connections.length===0) return <h1 className='text-bold text-2xl'>No connecti
         {connections.map((connection)=>{
             const {_id, firstName, lastName, photoUrl, age, gender, about}=connection;
             return(
-                <div key={_id} className='flex m-4 p-4 items-center rounded-lg bg-base-300 w-1/2 mx-auto'>
+                <div key={_id} className='flex m-4 p-4 items-center rounded-lg bg-base-300 w-1/2 mx-auto justify-between'>
                     <div><img src={photoUrl} alt="photo" className='w-20 h-20 rounded-full' /></div>
                     <div className='text-left m-4'>
                         <h2 className='font-bold text-xl'>
@@ -39,6 +40,7 @@ if(connections.length===0) return <h1 className='text-bold text-2xl'>No connecti
                         {age && gender && <p>{age+", "+gender}</p>}
                         <p>{about}</p>
                     </div>
+                        <Link to={"/chat/"+_id}><button className='btn btn-primary p-6'>Chat</button></Link>
                 </div>
             )
         })}
